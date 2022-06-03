@@ -7,3 +7,5 @@
 [C環境](C/env.md)
 
 [k8s-docker](k8s/docker-images.md)
+
+[Cコンパイル](C/compile.md)
