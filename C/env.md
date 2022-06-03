@@ -16,6 +16,7 @@
 
 ## 解決
 - 下記の手順を実施
-https://code.visualstudio.com/docs/cpp/config-mingw
+
+    https://code.visualstudio.com/docs/cpp/config-mingw
 
 頼りになるのは公式です。。。
