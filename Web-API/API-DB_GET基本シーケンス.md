@@ -5,7 +5,7 @@ sequenceDiagram
     participant API as API
     participant DB as DB
 
-    リクエスト元 ->>+ API: PUT HTTPリクエスト
+    リクエスト元 ->>+ API: GET HTTPリクエスト
     
     API ->>+ DB: 認証情報確認
         rect rgb(255, 100, 100)
@@ -24,18 +24,18 @@ sequenceDiagram
             end
         end
 
-    API ->>+ DB: 更新
+    API ->>+ DB: 情報取得
         rect rgb(255, 100, 100)
             alt 応答なし
                 API ->> API: エラー・ログ出力
                 API -->> リクエスト元: HTTP 500 Internal Server Error
             end
        end
-    DB ->>- API: 更新結果
+    DB ->>- API: 情報
         rect rgb(255, 100, 100)
-            alt 更新件数0件
+            alt 情報なし
                 API ->> API: エラー・ログ出力
-                API -->> リクエスト元: HTTP 404 Not Found
+                API -->> リクエスト元: 404 Not Found
             end
         end
 
