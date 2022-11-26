@@ -35,7 +35,7 @@ sequenceDiagram
         rect rgb(255, 100, 100)
             alt 情報なし
                 API ->> API: エラー・ログ出力
-                API -->> リクエスト元: 404 Not Found
+                API -->> リクエスト元: HTTP 404 Not Found
             end
         end
 
